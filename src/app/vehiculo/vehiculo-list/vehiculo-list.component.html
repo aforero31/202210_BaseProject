@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col mb-2" >
+         <table class="table" style="width: 50%;">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Línea</th>
+              <th scope="col">Modelo</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let vehiculo of vehiculos">
+            <tr>
+              <th scope="row">{{vehiculo.id}}</th>
+              <td>{{vehiculo.marca}}</td>
+              <td>{{vehiculo.linea}}</td>
+              <td>{{vehiculo.modelo}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="estadistica" *ngFor="let mark of marcas; index as i">
+        Total {{mark}} : {{cantidad[i]}}
+      </div>
+  </div>
+</div>
